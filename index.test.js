@@ -32,6 +32,12 @@ test('returns sum of numbers seperated by commas and new line', ()  =>
 
 test('returns sum of numbers with a custom delimiter', ()  =>
 {
-    //test case 5: Multiple numbers (custom : //[delimiter]\n[numbers])
+    //test case 6: Multiple numbers (custom : //[delimiter]\n[numbers])
     expect(stringCalculator.add("//;\n1;2")).toBe(3);
 })
+
+test('throws an error for negative numbers', () => 
+{
+    //test case 7: Negative numbers 
+    expect(() => stringCalculator.add("1,-2,3")).toThrow("Negative numbers not allowed -2");
+});

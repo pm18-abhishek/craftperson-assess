@@ -18,6 +18,13 @@ const stringCalculator =
         }
 
         const numbersArray = strNumbers.split(delimiter).map(Number);
+        
+        const negativeNumbers = numbersArray.filter((number)=> Number(number) < 0); //Negative number check
+        if(negativeNumbers.length)
+        {
+            throw new Error(`Negative numbers not allowed ${negativeNumbers.join(",")}`); //Error message
+        }
+
         const sum = numbersArray.reduce((acc, num)=> acc + num, 0);
         return sum;
     }
