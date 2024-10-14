@@ -6,8 +6,10 @@ const stringCalculator =
         if(strNumbers === "")
             return 0 
 
-        //If string is a single number (no comma)
-        return Number(strNumbers);
+        //If string consists of two numbers seperated by a comma
+        const numbersArray = strNumbers.split(',').map(Number)
+        const sum = numbersArray.reduce((acc, num)=> acc + num, 0);
+        return sum;
     }
 }
 
