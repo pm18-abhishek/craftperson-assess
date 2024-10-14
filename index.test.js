@@ -23,3 +23,9 @@ test('returns sum of numbers seperated by commas', ()  =>
     //test case 4: Multiple numbers (comma is the only delimiter)
     expect(stringCalculator.add("1,2,3,4")).toBe(10);
 })
+
+test('returns sum of numbers seperated by commas and new line', ()  =>
+{
+    //test case 5: Multiple numbers (delimiters : /,|\n/)
+    expect(stringCalculator.add("1\n2,3")).toBe(6);
+})
