@@ -14,6 +14,12 @@ test('returns number iteself, if string is a single number', ()  =>
 
 test('returns sum of two numbers seperated by comma', ()  =>
 {
-    //test case 2: Two numbers
+    //test case 3: Two numbers
     expect(stringCalculator.add("1,2")).toBe(3);
+})
+
+test('returns sum of numbers seperated by commas', ()  =>
+{
+    //test case 4: Multiple numbers (comma is the only delimiter)
+    expect(stringCalculator.add("1,2,3,4")).toBe(10);
 })
